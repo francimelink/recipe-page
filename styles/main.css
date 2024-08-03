@@ -3,11 +3,11 @@
 :root {
     /* Colors */
     --primary-white: hsl(0, 0%, 100%);
-    --primary-stone-100: hsl(30, 54%, 90%);
+    --primary-white-coffee: hsl(31, 53%, 90%);
     --primary-stone-150: hsl(30, 18%, 87%);
     --primary-wenge-brown: hsl(32, 10%, 34%);
     --primary-stone-900: hsl(24, 4%, 18%);
-    --primary-brown-800: hsl(14, 45%, 36%);
+    --primary-brandy-red: hsl(14, 45%, 36%);
     --primary-dark-raspberry: hsl(332, 51%, 32%);
     --primary-show: hsl(330, 100%, 98%);
 
@@ -17,6 +17,10 @@
     --heading-small: 1.25rem;
     --body-regular: 1rem;
     --body-bold: 1rem;
+
+    /* Font family */
+    --heading-family: "Young Serif", serif;
+    --body-familiy: "Outfit", sans-serif;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -165,9 +169,9 @@ body {
     flex-flow: column nowrap;
     min-height: 100vh;
     width: 100%;
-    background-color: var(--primary-stone-100);
+    background-color: var(--primary-white-coffee);
     align-items: center;
-    font-family: "Outfit", sans-serif;
+    font-family: var(--body-familiy);
 }
 
 .attribution {
@@ -177,6 +181,28 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+h1,
+h2 {
+    font-family: var(--heading-family)
+}
+
+.bullet {
+    display: inline-block;
+}
+
+li {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    color: var(--primary-wenge-brown);
+    gap: 1rem;
+    margin-bottom: .5rem;
+    line-height: 1.5;
+}
+
+li:last-child {
+    margin-bottom: 0;
 }
 
 header,
@@ -200,7 +226,6 @@ header .title {
 .title h1 {
     font-size: 2.25rem;
     color: var(--primary-stone-900);
-    font-family: "Young Serif", serif;
 }
 
 .title p {
@@ -220,18 +245,35 @@ main {
 
 section {
     margin-top: 2rem;
+    border-bottom: 1px solid var(--primary-white-coffee);
+    padding-bottom: 2rem;
+}
+
+
+section h2 {
+    color: var(--primary-brandy-red);
+    font-size: var(--heading-medium);
+    margin-bottom: 1.5rem;
+}
+
+.prepartion,
+section:last-child {
+    border: none;
 }
 
 .prepartion {
     background-color: var(--primary-show);
     border-radius: .75rem;
     padding: 1.5rem;
+    border: none;
 }
 
 .prepartion h2 {
     font-size: var(--heading-small);
     color: var(--primary-dark-raspberry);
     font-weight: 600;
+    margin-bottom: 0;
+    font-family: var(--body-familiy);
 }
 
 .prepartion__list {
@@ -239,18 +281,11 @@ section {
 }
 
 .prepartion__list .bullet {
-    display: inline-block;
-    padding: 0 26px 0 .5rem;
+    padding: 0 .625rem 0 .5rem;
     color: var(--primary-dark-raspberry);
 }
 
-.preparation__item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    margin-bottom: .5rem;
-    color: var(--primary-wenge-brown);
-    line-height: 1.5;
-}
+.preparation__item {}
 
 .preparation__item strong {
     font-weight: 600;
@@ -258,4 +293,9 @@ section {
 
 .preparation__item:last-child {
     margin-bottom: 0;
+}
+
+.ingredients .ingredients__item {
+    padding-left: .5rem;
+
 }
