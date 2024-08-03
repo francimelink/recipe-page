@@ -194,7 +194,7 @@ main {
 }
 
 header .title {
-    margin: 2.5rem 2rem 2rem;
+    margin: 2.5rem 2rem 0;
 }
 
 .title h1 {
@@ -215,7 +215,11 @@ header .title {
 /* Sections - Main content */
 
 main {
-    padding: 2rem 2rem 2.5rem;
+    padding: 0 2rem 2.5rem;
+}
+
+section {
+    margin-top: 2rem;
 }
 
 .prepartion {
